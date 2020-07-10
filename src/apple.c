@@ -8,7 +8,7 @@ int isMidEnough(int x){
   int requiredBag = 0;
 
   for(int i=0; i < n; i++){
-    if(A[i]%A[i_capacity] == 0){
+    if(A[i]%A[x] == 0){
       requiredBag += A[i]/A[x];
     }else{
       requiredBag += A[i]/A[x] + 1;
