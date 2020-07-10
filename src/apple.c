@@ -4,15 +4,14 @@ int n;
 int k;
 int A[100000];
 
-int isMidEnough(int i_capacity){
+int isMidEnough(int x){
   int requiredBag = 0;
 
   for(int i=0; i < n; i++){
-    printf("%d ", A[i]);
     if(A[i]%A[i_capacity] == 0){
-      requiredBag += A[i]/A[i_capacity];
+      requiredBag += A[i]/A[x];
     }else{
-      requiredBag += A[i]/A[i_capacity] + 1;
+      requiredBag += A[i]/A[x] + 1;
     }
   }
   
@@ -26,8 +25,8 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = -1;
-  ub = n-1;
+  lb = 0;
+  ub = 1000000000;
 
   while(ub - lb > 1){
         
