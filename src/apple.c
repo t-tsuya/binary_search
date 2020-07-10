@@ -9,9 +9,9 @@ int isMidEnough(int x){
 
   for(int i=0; i < n; i++){
     if(A[i]%A[x] == 0){
-      requiredBag += A[i]/A[x];
+      requiredBag += A[i] / x;
     }else{
-      requiredBag += A[i]/A[x] + 1;
+      requiredBag += A[i] / x + 1;
     }
   }
   
