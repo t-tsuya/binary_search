@@ -8,7 +8,7 @@ int isMidEnough(int x){
   int requiredBag = 0;
 
   for(int i=0; i < n; i++){
-    if(A[i]%A[x] == 0){
+    if(A[i] % x == 0){
       requiredBag += A[i] / x;
     }else{
       requiredBag += A[i] / x + 1;
@@ -40,7 +40,7 @@ int main(){
 
   }
 
-  printf("%d\n", A[ub]);
+  printf("%d\n", ub);
 
 
 
